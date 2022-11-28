@@ -13,11 +13,11 @@ import com.example.differentscreensize.enums.WindowSizeClass
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mBinding : ActivityMainBinding;
+    private lateinit var mBinding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         val container : ViewGroup = mBinding.container
         container.addView(object : View(this) {
             override fun onConfigurationChanged(newConfig: Configuration?) {
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val metrics =
             WindowMetricsCalculator.getOrCreate().computeCurrentWindowMetrics(this)
         val widthDp = metrics.bounds.width() / resources.displayMetrics.density
-        val windthWidowSizeClass = when {
+        val widthWidowSizeClass = when {
             widthDp < 600f -> WindowSizeClass.COMPACT
             widthDp < 840f -> WindowSizeClass.MEDIUM
             else -> WindowSizeClass.EXPANDED
@@ -47,6 +47,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         Log.d("Data", "Window Size in height : $heightWindowSizeClass")
-        Log.d("Data", "Window Size in width : $windthWidowSizeClass")
+        Log.d("Data", "Window Size in width : $widthWidowSizeClass")
     }
 }
