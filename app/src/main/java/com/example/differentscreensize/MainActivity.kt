@@ -11,6 +11,13 @@ import androidx.window.layout.WindowMetricsCalculator
 import com.example.differentscreensize.databinding.ActivityMainBinding
 import com.example.differentscreensize.enums.WindowSizeClass
 
+/**
+ *  @author T.M. Rithwanul Islam
+ *  @designation Sr. Software Engineer
+ *  This is the starting point in android application. In this project
+ *  I am calculating android device window size
+ *
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding : ActivityMainBinding
@@ -29,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         computeWindowSizeClass()
     }
 
+    /**
+     * Calculating window size of the application.
+     */
     private fun computeWindowSizeClass() {
         val metrics =
             WindowMetricsCalculator.getOrCreate().computeCurrentWindowMetrics(this)
