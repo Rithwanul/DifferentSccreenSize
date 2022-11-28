@@ -1,13 +1,11 @@
 package com.example.differentscreensize
 
 import android.content.res.Configuration
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.view.WindowMetrics
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.window.layout.WindowMetricsCalculator
 import com.example.differentscreensize.databinding.ActivityMainBinding
